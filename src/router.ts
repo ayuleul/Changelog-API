@@ -56,6 +56,7 @@ router.post(
   body("title").exists().isString(),
   body("body").exists().isString(),
   body("productId").exists().isString(),
+  handleInputErrors,
   createUpdate
 );
 router.delete("/update/:id", deleteUpdate);
@@ -77,6 +78,7 @@ router.post(
   body("name").exists().isString(),
   body("description").exists().isString(),
   body("updateID").exists().isString(),
+  handleInputErrors,
   () => {}
 );
 router.delete("/update-point/:id", () => {});

@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
   throw new Error("hello");
 });
 
-app.use("/api", protect, [router]);
+app.use("/api", protect, router);
 
 app.post("/user", createNewUser);
 app.post("/login", signIn);
