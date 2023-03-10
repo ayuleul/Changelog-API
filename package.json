@@ -5,7 +5,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "ts-node src/index.ts",
-    "prod": "STAGE=prod ts-node src/index.ts"
+    "prod": "STAGE=prod ts-node src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "@prisma/client": "^4.10.1",
